@@ -1,6 +1,6 @@
 # Clustering Obstacles
 
-![cluster](media\cluster.PNG)
+![cluster](media/cluster.PNG)
 
 ## Implement Euclidean Clustering with PCL Library
 
@@ -52,9 +52,9 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr> ProcessPointClouds<PointT>::C
 
 A KD-Tree is a binary tree that splits points between alternating axes. By separating space by splitting regions, nearest neighbor search can be made much faster when using an algorithm like euclidean clustering.
 
-<img src="media\kdtree.png" alt="kdtree" style="zoom: 67%;" />
+<img src="media/kdtree.png" alt="kdtree" style="zoom: 67%;" />
 
-<img src="media\kdtree_graph.png" alt="kdtree_graph" style="zoom: 80%;" />
+<img src="media/kdtree_graph.png" alt="kdtree_graph" style="zoom: 80%;" />
 
 ## Inserting Points into KD-Tree in C++
 
@@ -103,7 +103,7 @@ struct KdTree
 
 Once points are able to be inserted into the tree, the next step is being able to search for nearby points inside the tree compared to a given target point. Points within a distance of `distanceTol` are considered to be nearby. The KD-Tree is able to split regions and allows certain regions to be completely ruled out, speeding up the process of finding nearby neighbors.
 
-<img src="media\kdtree_search.PNG" alt="kdtree_search" style="zoom:50%;" />
+<img src="media/kdtree_search.PNG" alt="kdtree_search" style="zoom:50%;" />
 
 ```c++
 void searchHelper(std::vector<float> target, Node* node, uint depth, float distanceTol, std::vector<int> &ids)
@@ -197,16 +197,16 @@ std::vector<std::vector<int>> euclideanCluster(const std::vector<std::vector<flo
 
 **Output:**
 
-![euclidean_cluster_quiz](media\euclidean_cluster_quiz.PNG)
+![euclidean_cluster_quiz](media/euclidean_cluster_quiz.PNG)
 
 ### 3D Bounding Box
 
-![bounding_box](media\bounding_box.PNG)
+![bounding_box](media/bounding_box.PNG)
 
 # Extra Challenge: PCA Boxes
 
 Some comments from the previous concept about the way bounding boxes are calculated. That method of generating bounding boxes the boxes are always oriented along the X and Y axis. This is ok if the cluster that you are looking at has its majority of points orientated along these axes , but what if the cluster was a very long rectangular object at a 45 degree angle to the X axis. The resulting bounding box would be a unnecessarily large, and would constrain your car's available space to move around. See the image below for reference.
 
-![pca_box](media\pca_box.png)
+![pca_box](media/pca_box.png)
 
 In the above image, the bounding box on the right is more efficient, containing all the points with the minimum area required. It would be nice to take into account box rotation in the XY plane, about the Z axis. Rotation about the X or Y axes would yield weird results, since the car in the majority of situations is not concerned with the Z dimension, or has any control over Z movement.

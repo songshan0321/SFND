@@ -1,6 +1,6 @@
 # Filter Real Point Clouds
 
-![filter_pcl](media\filter_pcl.PNG)
+![filter_pcl](media/filter_pcl.PNG)
 
 ## Voxel Grid
 
@@ -67,4 +67,4 @@ typename pcl::PointCloud<PointT>::Ptr ProcessPointClouds<PointT>::FilterCloud(ty
 
 ## Final Stream Result
 
-![stream](media\stream.gif)
+![stream](media/stream.gif)

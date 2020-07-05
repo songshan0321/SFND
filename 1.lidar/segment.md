@@ -2,7 +2,7 @@
 
 ## Plane Segmentation
 
-![plane_segment](media\plane_segment.png)
+![plane_segment](media/plane_segment.png)
 
 ## Plane Segmentation with PCL
 
@@ -72,19 +72,19 @@ std::pair<typename pcl::PointCloud<PointT>::Ptr, typename pcl::PointCloud<PointT
 
 ## RANSAC for Lines
 
-![ransac_line](media\ransac_line.gif)
+![ransac_line](media/ransac_line.gif)
 
 
 
-![ransac_line_equation](media\ransac_line_equation.PNG)
+![ransac_line_equation](media/ransac_line_equation.PNG)
 
 
 
 ## RANSAC for Planes
 
-![ransac_plane_equation_0](media\ransac_plane_equation_0.PNG)
+![ransac_plane_equation_0](media/ransac_plane_equation_0.PNG)
 
-![ransac_plane_equation_1](media\ransac_plane_equation_1.PNG)
+![ransac_plane_equation_1](media/ransac_plane_equation_1.PNG)
 
 ## Implement RANSAC for Planes in C++
 
