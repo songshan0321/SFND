@@ -92,9 +92,9 @@ struct KdTree
     	if (*node == NULL)
         	*node = new Node(point, id);
     	else if (point[depth%2] < (*node)->point[depth%2])
-        	insertHelper(&((*node)->left), depth++, point, id);
+        	insertHelper(&((*node)->left), depth+1, point, id);
         else
-        	insertHelper(&((*node)->right), depth++, point, id);
+        	insertHelper(&((*node)->right), depth+1, point, id);
     }
 };
 ```
@@ -119,9 +119,9 @@ void searchHelper(std::vector<float> target, Node* node, uint depth, float dista
         }
 
         if (target[depth%2]-distanceTol < node->point[depth%2])
-            searchHelper(target, node->left, depth++, distanceTol, ids);
+            searchHelper(target, node->left, depth+1, distanceTol, ids);
         if (target[depth%2]+distanceTol > node->point[depth%2])
-            searchHelper(target, node->right, depth++, distanceTol, ids);
+            searchHelper(target, node->right, depth+1, distanceTol, ids);
     }
 }
 
