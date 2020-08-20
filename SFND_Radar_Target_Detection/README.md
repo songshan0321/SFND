@@ -1,6 +1,8 @@
 # Radar Target Generation and Detection
 
-## Project Goal
+## Project Overview
+
+![project_overview](media/project_overview.png)
 
 - Configure the FMCW waveform based on the system requirements.
 - Define the range and velocity of target and simulate its displacement.
