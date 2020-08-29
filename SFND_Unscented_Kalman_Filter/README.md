@@ -3,7 +3,7 @@
 
 ### Project Result
 
-![ukf_result](/home/shan/github/SFND/SFND_Unscented_Kalman_Filter/media/ukf_result.gif)
+![ukf_result](media/ukf_result.gif)
 
 In this project you will implement an Unscented Kalman Filter to estimate the state of multiple cars on a highway using noisy lidar and radar measurements. Passing the project requires obtaining RMSE values that are lower that the tolerance outlined in the project rubric. 
 
